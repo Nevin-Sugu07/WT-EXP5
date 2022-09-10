@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXP 5-E</title>
+    <script>
+        function flip() {
+            var img = document.getElementById("coin");
+            var head = document.getElementById("num_heads");
+            var tail = document.getElementById("num_tails");
+            var h = parseInt(head.innerHTML);
+            var t = parseInt(tail.innerHTML);
+            var l = ["head.png", "tail.png"];
+            var s = Math.floor(Math.random()*2);
+            if (l[s]==l[0]) {
+                head.innerHTML = h+1;
+            } else {
+                tail.innerHTML = t+1;
+            };
+            img.src = " "+l[s];
+        }
+    </script>
+</head>
+<body>
+    <h1>Heads or Tails?</h1>
+    <div>
+        <figure><img src="flip.png" onclick="flip()" id="coin" height="300px" width="300px"><br>
+            <figcaption style="position: relative; left: 95px;"><small>Click image to toss!</small></figcaption></figure>
+        </div></span>
+        <p>
+            Heads Total: <span id="num_heads">0</span><br><br> 
+            Tails Total: <span id="num_tails">0</span><br><br>
+        </p>
+</body>
+</html>
